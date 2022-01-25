@@ -1,0 +1,20 @@
+<%- include("partials/header") %>
+
+    <h1>Home</h1>
+    <p>  <%= firstPost %>   </p>
+
+  <%  postArray.forEach(function(post){  %>
+
+    <h1><%= post.postTitle  %> </h1>
+    <p> <%= post.postText  %>...         
+    </p>
+
+  <%  })  %>
+    
+  <form action="/newpost" method="post">
+    <div class="new-post">
+  <button type="submit">Add New Post</button>
+</div>
+</form>
+  
+<%- include("partials/footer") %>  
